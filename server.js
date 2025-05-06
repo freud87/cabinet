@@ -43,3 +43,7 @@ app.post('/api/rendezvous', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`API en ligne sur http://localhost:${PORT}`);
 });
+app.get('/', (req, res) => {
+  res.send('Bienvenue sur l\'API du cabinet médical');
+});
+
