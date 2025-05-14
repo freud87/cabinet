@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des patients</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    input, textarea { width: 100%; padding: 5px; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Ajouter un patient</h2>
+  <form id="patientForm">
+    <label>Nom : <input type="text" name="nom" required></label>
+    <label>Prénom : <input type="text" name="prenom" required></label>
+    <label>Téléphone : <input type="text" name="telephone"></label>
+    <label>Date de naissance : <input type="date" name="naissance"></label>
+    <label>Prochain RDV : <input type="date" name="prochain_rdv" id="prochain_rdv"></label>
+    <label>Allergies : <input type="text" name="allergies"></label>
+    <label>Remarques : <textarea name="remarques"></textarea></label>
+    <button type="submit">Enregistrer</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    // Définir la date du jour par défaut dans le champ Prochain RDV
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('prochain_rdv').value = today;
+    });
+
+    document.getElementById('patientForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(e.target);
+      fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        body: data
+      })
+      .then(res => res.text())
+      .then(msg => {
+        document.getElementById('message').textContent = msg;
+        e.target.reset();
+
+        // Réinitialiser le champ Prochain RDV à la date du jour après soumission
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('prochain_rdv').value = today;
+      });
+    });
+  </script>
+</body>
+</html>
