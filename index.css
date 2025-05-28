@@ -90,7 +90,8 @@ button:hover {
 }
 .listerdv,
 .listeAtt,
-.listeCons {
+.listeCons,
+.listeTerm {
   background-color: #3f71c2;
   padding: 1rem;
   border-radius: 8px;
