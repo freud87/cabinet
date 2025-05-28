@@ -102,7 +102,9 @@ main {
 }
 
 /* Conteneurs colorés */
-.confirmé, .listerdv {
+.listerdv,
+.listeAtt,
+.listeCons {
   background-color: #3f71c2;
   padding: 1rem;
   border-radius: 8px;
