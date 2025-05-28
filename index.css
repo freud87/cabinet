@@ -17,8 +17,11 @@ header {
 }
 navbar {
   flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
 header h2 {
+  flex: 1;
   font-size: 2.5rem; /* Titre principal */
   font-weight: 700;
   margin: 0;
