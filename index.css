@@ -44,7 +44,7 @@ sidebar,
   flex-direction: column; /* disposition en colonne */
   gap: 10px;
 }
-.sidebar button, .choix .btn {
+sidebar button, .choix .btn {
   padding: 0.75rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
