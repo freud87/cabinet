@@ -80,6 +80,11 @@ sidebar,
   margin-left: 5px;
   /*padding: 1rem;*/
 }
+.rubriques {
+  flex-direction: column; /* disposition en colonne */
+  gap: 5px;
+  background-color: #489c9f;
+}
 .choix {
   display: none; /* cachée par défaut */
   flex-direction: column; /* disposition en colonne */
