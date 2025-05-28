@@ -1,0 +1,94 @@
+/* Appliquer Nunito à tout le site */
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Titre principal */
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Horodateur */
+.horodateur {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Boutons de navigation */
+.nav-buttons, .choix {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.choix {
+  display: none; /* cachée par défaut */
+  flex-direction: column; /* disposition en colonne */
+  gap: 10px;
+}
+
+.nav-buttons .btn,
+.nav-buttons button, .choix .btn {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #3f71c2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+#attente{background-color:green;}
+#chngrdv{background-color:yellow; color:black;}
+#supprimer{background-color:red;}
+.nav-buttons .btn:hover,
+.nav-buttons button:hover {
+  background-color: #3058a1;
+}
+
+/* Section principale */
+.main {
+  display: flex;
+}
+
+/* Colonnes */
+.attente, .rdvdujour {
+  flex: 1;
+  padding: 1rem;
+}
+
+.attente h3,
+.rdvdujour h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+/* Conteneurs colorés */
+.confirmé, .listerdv {
+  background-color: #3f71c2;
+  padding: 1rem;
+  border-radius: 8px;
+  min-height: 300px;
+  color: white;
+}

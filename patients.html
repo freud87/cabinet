@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des patients</title>
+  <link rel="stylesheet" href="patients.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🦷 Liste des patients</h1>
+
+    <div class="actions">
+		<button><a href="index.html">🏠 Accueil</a></button>
+		<button><a href="NVPatient.html">➕ Nouveau patient</a></button>
+		<button onclick="allerRDV()">📅 Aller aux RDV</button>
+    </div>
+	
+	<div class="search-bar">
+		<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
+	</div>
+
+    <table id="table-patients">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="patients.js"></script>
+</body>
+</html>

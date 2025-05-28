@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Nouveau patient</title>
+  <link rel="stylesheet" href="NVPatient.css">
+</head>
+<body>
+	<div class="header">
+		<img src="logomini.png" alt="Logo cabinet" class="logo">
+		<h1>Ajouter un nouveau patient</h1>
+		<div class="form-actions top-actions">
+		  <button type="button" onclick="envoyerFormulaire()">✅ Enregistrer</button>
+		  <button type="button" onclick="window.location.href='index.html'">↩️ Retour</button>
+		</div>
+	</div>
+
+  <div class="container">
+    <form id="patient-form">
+      
+
+      <input type="hidden" id="id" name="id">
+
+      <div class="form-group">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" oninput="genererID()" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" oninput="genererID()" required>
+      </div>
+      <div class="form-group">
+        <label for="sexe">Sexe :</label>
+        <select name="sexe" id="sexe" required>
+          <option value="">-- Choisir --</option>
+          <option>Homme</option>
+          <option>Femme</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="naissance">Date de naissance :</label>
+        <input type="date" id="naissance" name="naissance" oninput="genererID()" required>
+      </div>
+      <div class="form-group">
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" oninput="genererID()" required>
+      </div>
+      <div class="form-group">
+        <label for="adresse">Adresse :</label>
+        <input type="text" name="adresse" id="adresse" required>
+      </div>
+      <div class="form-group">
+        <label for="rdv">Prochain RDV :</label>
+        <input type="date" name="rdv" id="rdv" required>
+      </div>
+      <div class="form-group">
+        <label for="observations">Observations :</label>
+        <textarea name="observations" id="observations"></textarea>
+      </div>
+
+      <p id="success-message" class="success" style="display: none;">Patient ajouté avec succès ✅</p>
+    </form>
+  </div>
+
+  <script>
+  // Génère un ID patient en fonction des données saisies
+  function genererID() {
+    const prenom = document.getElementById("prenom").value.trim();
+    const nom = document.getElementById("nom").value.trim();
+    const naissance = document.getElementById("naissance").value;
+    const telephone = document.getElementById("telephone").value.trim();
+
+    if (prenom && nom && naissance && telephone) {
+      const lettrePrenom = prenom.charAt(0).toUpperCase();
+      const lettreNom = nom.charAt(0).toUpperCase();
+      const annee = naissance.split("-")[0].slice(-2);
+      const deuxChiffresTel = telephone.slice(-2);
+      const id = `${lettrePrenom}${lettreNom}${annee}${deuxChiffresTel}`;
+      document.getElementById("id").value = id;
+    } else {
+      document.getElementById("id").value = "";
+    }
+  }
+
+  // Initialise la date du champ RDV à aujourd'hui
+  document.addEventListener("DOMContentLoaded", () => {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById("rdv").value = today;
+  });
+
+  // Soumet manuellement le formulaire depuis un bouton externe
+  <script>
+function envoyerFormulaire() {
+  const form = document.getElementById("patient-form");
+
+  const data = {
+    action: "addPatient",
+    nom: document.getElementById("nom").value.trim(),
+    prenom: document.getElementById("prenom").value.trim(),
+    sexe: document.getElementById("sexe").value,
+    dateNaissance: document.getElementById("naissance").value,
+    telephone: document.getElementById("telephone").value.trim(),
+    adresse: document.getElementById("adresse").value.trim(),
+    dateRdv: document.getElementById("rdv").value,
+    observations: document.getElementById("observations").value.trim()
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbxQ3tz6GH7DK0-fytd947B0PNcyzgfOgn_M7e37piaCifj7HSA40E5oSjwa8MmE7DDd/exec", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(response => response.json())
+  .then(response => {
+    if (response.success) {
+      document.getElementById("success-message").style.display = "block";
+      form.reset();
+    } else {
+      alert("Erreur : " + response.message);
+    }
+  })
+  .catch(error => {
+    console.error("Erreur lors de l'envoi :", error);
+    alert("Erreur lors de l’envoi des données.");
+  });
+}
+</script>
+
+
+</script>
+
+</body>
+</html>
