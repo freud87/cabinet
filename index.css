@@ -108,6 +108,9 @@ i {
   flex-direction: row;
   justify-content: center;
 }
+#flchGch {
+  display: none;
+}
 .choix {
   display: none; /* cachée par défaut */
   flex-direction: column; /* disposition en colonne */
