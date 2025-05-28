@@ -57,7 +57,7 @@ sidebar,
   flex-direction: column;
   /*justify-content: center;*/
   gap: 1rem;
-  margin-right: 5px;
+  margin-left: 5px;
   /*padding: 1rem;*/
 }
 .choix {
