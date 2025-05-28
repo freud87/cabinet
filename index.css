@@ -44,11 +44,16 @@ navbar button {
   width: auto;
 }
 navbar button.this {
+  border-radius: 4px;
   background-color: #58a8a2; /* Une teinte plus foncée ou plus claire */
   font-weight: bold; /* Texte en gras */
   align-self: flex-end;
   height: 100%;
   box-shadow: 0 20px 0 #3b837e; /* ombre vers le bas */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 /* Horodateur */
 .horodateur {
