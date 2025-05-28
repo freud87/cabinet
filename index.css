@@ -88,10 +88,9 @@ sidebar button {
 .nav-buttons button:hover {
   background-color: #3058a1;
 }
-h4 {
+h3 {
   /*font-size: 1.5rem;*/
   font-weight: 600;
-  margin-bottom: 0.7rem;
 }
 
 /* Conteneurs colorés */
