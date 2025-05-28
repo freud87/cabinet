@@ -84,7 +84,7 @@ sidebar,
   display: none; /* cachée par défaut */
   flex-direction: column; /* disposition en colonne */
   gap: 10px;
-  background-color: #C1E3E0;
+  background-color: #75c7c1;
 }
 sidebar button {
   padding: 0.75rem 1.2rem;
