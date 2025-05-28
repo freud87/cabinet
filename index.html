@@ -4,12 +4,15 @@
 	<meta charset="UTF-8" />
 	<title>Accueil</title>
 	<link rel="stylesheet" href="index.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 	<body>
 		<header>
 			<img src="logomini.png" alt="Logo cabinet" class="logo">
-			<h2>Mon Cabinet</h2>
+			<navbar>
+				<h2>Mon Cabinet</h2>
+				<button><a href="patients.html" class="btn">Liste des patients</a></button>
+				<button><a href="RDV.html" class="btn">Rendez-vous</a></button>
+			</navbar>
 			<div class="horodateur">
 			  <p><span id="date"></span></br>
 			  <span id="heure"></span></p>
@@ -17,11 +20,8 @@
 		</header>
 		<main>
 			<sidebar>
-				<button onclick=""class="btn"><a href="patients.html" class="btn">Liste des patients</a></button>
-				<button onclick=""class="btn"><a href="NVPatient.html" class="btn">Nouveau patient</a></button>
-				<button onclick=""class="btn"><a href="fiche.html" class="btn">fiche patient</a></button>
-				<button onclick=""class="btn"><a href="RDV.html" class="btn">Rendez-vous</a></button>
-				<button onclick=""class="btn">Recette</button>
+				<button onclick="">Nouveau patient</button>
+				<button onclick="">Recette</button>
 			</sidebar>
 			<div class="rdvdujour">
 				<h3>RDV du jour</h3>
