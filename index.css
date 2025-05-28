@@ -49,7 +49,7 @@ navbar button.this {
   font-weight: bold; /* Texte en gras */
   align-self: flex-end;
   height: 100%;
-  box-shadow: 0 20px 0 #3b837e; /* ombre vers le bas */
+  box-shadow: 0 20px 0 #58a8a2; /* ombre vers le bas */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0;
