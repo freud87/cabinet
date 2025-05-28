@@ -5,7 +5,9 @@ body {
   background-color: #fff;
   color: #222;
 }
-
+a {
+  text-decoration: none;
+}
 /* Header */
 header {
   display: flex;
