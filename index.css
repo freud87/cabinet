@@ -61,7 +61,7 @@ sidebar {
 }
 .contenu > div {
   flex: 1; /* Tous les éléments prennent la même largeur */
-  gap: 5px;
+  gap: 10px;
 }
 sidebar,
 .rdvdujour,
