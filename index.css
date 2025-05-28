@@ -55,7 +55,8 @@ sidebar,
 .rdvdujour,
 .choix,
 .attente,
-.soin {
+.soin,
+.termine {
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
