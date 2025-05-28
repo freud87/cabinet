@@ -88,15 +88,6 @@ sidebar button {
 .nav-buttons button:hover {
   background-color: #3058a1;
 }
-
-/* Section principale */
-
-
-/* Colonnes */
-.attente, .rdvdujour {
-  flex: 1;
-  padding: 1rem;
-}
 h4 {
   /*font-size: 1.5rem;*/
   font-weight: 600;
