@@ -24,7 +24,6 @@ navbar {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
 }
 header h2 {
   flex: 1;
@@ -95,7 +94,7 @@ sidebar {
   background-color: #b6e5e2;
 }
 .titre {
-  margin: 1.2rem 0.7rem 0;
+  margin: 0.9rem 0 0.6rem 0;
   font-weight: bold;
   font-size: 24px;
 }
