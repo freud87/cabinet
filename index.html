@@ -31,26 +31,38 @@
 				<div class="listerdv">
 				</div>
 			</div>
-			<div class="choix">
-				<input id="id" name="id">
-				<button onclick="" id="attente">Vers Salle</br>d'attente</button>
-				<button onclick="" id="chngrdv">Changer</br>RDV</button>
-				<button onclick="supprimerRDV()" id="supprimer">Supprimer</button>
+			<div class="choix" id="chRDV">
+				<span id="id"></span>
+				<button onclick="" id="rdvAtt">Vers Salle d'attente</button>
+				<button onclick="" id="chngrdv">Changer RDV</button>
+				<button onclick="supprimerRDV()" id="supprdv">Supprimer</button>
 			</div>
 			<div class="attente">
 				Salle d'attente
 				<div class="listeAtt">
 				</div>
 			</div>
+			<div class="choix" id="chAtt">
+				<button onclick="" id="attsoin">Vers Salle de soins</button>
+				<button onclick="" id="chngrdv">Changer RDV</button>
+				<button onclick="supprimerRDV()" id="supprdv">Supprimer</button>
+			</div>
 			<div class="soin">
 				Salle de soin
 				<div class="listeCons">
 				</div>
 			</div>
-			<div class="terminé">
+			<div class="choix" id="chSoin">
+				<button onclick="" id="attente">Terminer soins</button>
+			</div>
+			<div class="termine">
 				Soins terminés
 				<div class="listeTerm">
 				</div>
+			</div>
+			<div class="choix" id="chTerm">
+				<button onclick="" id="attente">Nouveau RDV</button>
+				<button onclick="" id="attente">Frais visite</button>
 			</div>
 		</main>
 		<script>
@@ -70,72 +82,6 @@
 			// Mise à jour immédiate + chaque minute
 			updateHorodateur();
 			setInterval(updateHorodateur, 60 * 1000);
-			
-			document.addEventListener("DOMContentLoaded", () => {
-			  const url = "https://script.google.com/macros/s/AKfycbxQ3tz6GH7DK0-fytd947B0PNcyzgfOgn_M7e37piaCifj7HSA40E5oSjwa8MmE7DDd/exec?action=rdv"; // remplace ici
-
-			  fetch(url)
-				.then(response => response.json())
-				.then(patients => {
-				  const listeRDV = document.querySelector(".listerdv");
-				  listeRDV.innerHTML = "";
-
-				  if (patients.length === 0) {
-					listeRDV.innerHTML = "<p>Aucun rendez-vous aujourd’hui.</p>";
-					return;
-				  }
-
-				const ul = document.createElement("ul");
-				patients.forEach(p => {
-				  const li = document.createElement("li");
-				  li.textContent = `${p.id} - ${p.nom}`;
-
-				  // Ajoute un événement pour afficher la div .choix au clic
-				  li.addEventListener("click", () => {
-					  const fullText = li.textContent.trim();
-					  const idMatch = fullText.match(/^([A-Z0-9]+)/);
-					  const uniqueId = idMatch[0]; // Identifiant unique extrait
-					document.getElementById("id").value = uniqueId;
-				
-					document.querySelector(".choix").style.display = "flex";
-					//choixDiv.style.display = "flex";
-
-					
-				  });
-
-				  ul.appendChild(li);
-				});
-				listeRDV.appendChild(ul);
-				})
-				
-				.catch(err => {
-				  console.error("Erreur lors de l'importation des RDV :", err);
-				  document.querySelector(".listerdv").innerHTML = "<p>Erreur de chargement.</p>";
-				});
-			});
-			
-			function supprimerRDV() {
-  const id = document.getElementById("id").value;
-
-  fetch("https://script.google.com/macros/s/AKfycbxQ3tz6GH7DK0-fytd947B0PNcyzgfOgn_M7e37piaCifj7HSA40E5oSjwa8MmE7DDd/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      action: "supprimer",
-      id: id
-    })
-  })
-    .then(response => response.text())
-    .then(data => alert(data))
-    .catch(error => alert("Erreur : " + error));
-}
-
-
-			
-
-
 		</script>
 	</body>
 </html>
