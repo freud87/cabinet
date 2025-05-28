@@ -64,7 +64,7 @@ sidebar {
   flex: 1;
   display: flex;
   justify-content: space-between;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 .contenu > div {
   flex: 1; /* Tous les éléments prennent la même largeur */
