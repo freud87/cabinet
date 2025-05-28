@@ -97,7 +97,7 @@ sidebar,
   font-size: 24px;
 }
 .rdj {
-  dispplay: flex;
+  display: flex;
   flex-direction: row;
 }
 .choix {
