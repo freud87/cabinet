@@ -55,7 +55,7 @@ navbar button {
 }
 main {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1rem 0 0 1.5rem;
 }
 sidebar {
   widht: 20%;
