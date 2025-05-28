@@ -27,7 +27,7 @@ header h2 {
   margin: 0;
 }
 navbar button {
-  padding: 0.75rem 1.2rem;
+  padding: 0.6rem 1.1rem;
   font-size: 1rem;
   font-weight: 600;
   background-color: #75C7C1;
@@ -38,6 +38,7 @@ navbar button {
   /*cursor: pointer;*/
   text-decoration: none;
   transition: background-color 0.3s;
+  margin-left: 10px;
 }
 /* Horodateur */
 .horodateur {
