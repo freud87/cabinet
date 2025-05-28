@@ -96,6 +96,19 @@ sidebar,
   font-weight: bold;
   font-size: 24px;
 }
+i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4285f4;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 .rdj {
   display: flex;
   flex-direction: row;
