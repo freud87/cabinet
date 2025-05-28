@@ -49,8 +49,14 @@ navbar button {
 }
 main {
   display: flex;
+  margin-top: 1rem;
 }
-/* Boutons de navigation */
+sidebar {
+  widht: 20%;
+}
+.contenu {
+  flex: 1;
+}
 sidebar,
 .rdvdujour,
 .choix,
