@@ -37,6 +37,24 @@
 				</table>
 			</div>
 		</main>
+		<script>
+			function updateHorodateur() {
+			  const maintenant = new Date();
+
+			  const optionsDate = { day: '2-digit', month: '2-digit', year: 'numeric' };
+			  const dateStr = maintenant.toLocaleDateString('fr-FR', optionsDate);
+
+			  const heures = maintenant.getHours().toString().padStart(2, '0');
+			  const minutes = maintenant.getMinutes().toString().padStart(2, '0');
+			  const heureStr = `${heures}:${minutes}`;
+
+			  document.getElementById('date').textContent = dateStr;
+			  document.getElementById('heure').textContent = heureStr;
+			}
+			// Mise à jour immédiate + chaque minute
+			updateHorodateur();
+			setInterval(updateHorodateur, 60 * 1000);
+		</script>
 		  <script src="patients.js"></script>
 	</body>
 </html>
