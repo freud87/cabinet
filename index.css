@@ -83,7 +83,12 @@ sidebar,
 .rubriques {
   flex-direction: column; /* disposition en colonne */
   gap: 5px;
+  border-radius: 8px;
   background-color: #489c9f;
+}
+.titres {
+  margin: 5px 0;
+  font-weight: bold;
 }
 .choix {
   display: none; /* cachée par défaut */
@@ -114,7 +119,6 @@ button:hover {
 .listCons,
 .listTerm {
   padding: 1rem;
-  border-radius: 8px;
   min-height: 300px;
   color: white;
 }
