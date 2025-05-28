@@ -86,9 +86,11 @@ sidebar,
   border-radius: 8px;
   background-color: #75c7c1;
 }
-.titre {
-  margin: 5px 0;
+.titre,
+.fleches {
+  margin: 2rem 0;
   font-weight: bold;
+  font-size: 24px;
 }
 .choix {
   display: none; /* cachée par défaut */
