@@ -55,7 +55,7 @@ navbar button {
 }
 main {
   display: flex;
-  margin: 1rem 0 0 1.5rem;
+  margin-top: 1rem;
 }
 sidebar {
   widht: 20%;
@@ -64,6 +64,7 @@ sidebar {
   flex: 1;
   display: flex;
   justify-content: space-between;
+  margin-left: 1rem;
 }
 .contenu > div {
   flex: 1; /* Tous les éléments prennent la même largeur */
