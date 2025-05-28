@@ -87,16 +87,15 @@ sidebar,
   background-color: #75c7c1;
 }
 .titre {
-  margin: 1.7rem 0;
   font-weight: bold;
   font-size: 24px;
 }
 .fleches {
-  margin: 1.7rem 0;
   font-weight: bold;
   font-size: 24px;
 }
 .rdj {
+  margin: 1.7rem 0;
   display: flex;
   flex-direction: row;
 }
