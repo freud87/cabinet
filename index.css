@@ -59,6 +59,10 @@ sidebar {
   display: flex;
   justify-content: space-between;
 }
+.contenu > div {
+  flex: 1; /* Tous les éléments prennent la même largeur */
+  gap: 5px;
+}
 sidebar,
 .rdvdujour,
 .choix,
