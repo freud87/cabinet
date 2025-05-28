@@ -27,7 +27,7 @@ header h1 {
   text-align: right;
   font-size: 1.2rem;
   font-weight: 600;
-  line-height: 1;
+  margin-right: 5px;
 }
 
 /* Boutons de navigation */
