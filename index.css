@@ -86,14 +86,19 @@ sidebar,
   border-radius: 8px;
   background-color: #75c7c1;
 }
-.titre,
+.titre {
+  margin: 1.7rem 0;
+  font-weight: bold;
+  font-size: 24px;
+}
 .fleches {
-  margin: 2rem 0;
+  margin: 1.7rem 0;
   font-weight: bold;
   font-size: 24px;
 }
 .rdj {
   dispplay: flex;
+  flex-direction: row;
 }
 .choix {
   display: none; /* cachée par défaut */
