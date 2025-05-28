@@ -42,7 +42,8 @@ navbar button {
   text-align: center;
   transition: background-color 0.3s;
   margin-left: 10px;
-  width: auto
+  width: auto;
+  height: auto;
 }
 navbar button.this {
   background-color: #58a8a2; /* Une teinte plus foncée ou plus claire */
