@@ -52,7 +52,10 @@ main {
 }
 /* Boutons de navigation */
 sidebar,
-.choix {
+.rdvdujour,
+.choix,
+.attente,
+.soin {
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
