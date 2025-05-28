@@ -2,74 +2,123 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8" />
-	<title>Accueil</title>
+	<title>Patients</title>
 	<link rel="stylesheet" href="index.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-	<body>
-		<header>
-			<img src="logomini.png" alt="Logo cabinet" class="logo">
-			<navbar>
-				<h2>Mon Cabinet</h2>
-				<button><a href="index.html">Tableau de bord</a></button>
-				<button class="this">Liste des patients</button>
-				<button><a href="RDV.html">Rendez-vous</a></button>
-				<button><a href="statistics.html">Statistiques</a></button>
-				<button><a href="settings.html">Configurations</a></button>
-			</navbar>
-			<div class="horodateur">
-			  <p><span id="date"></span></br>
-			  <span id="heure"></span></p>
+<body>
+	<header>
+		<img src="logomini.png" alt="Logo cabinet" class="logo">
+		<navbar>
+			<h2>Mon Cabinet</h2>
+			<button><a href="index.html">Tableau de bord</a></button>
+			<button class="this">Liste des patients</button>
+			<button><a href="RDV.html">Rendez-vous</a></button>
+			<button><a href="statistics.html">Statistiques</a></button>
+			<button><a href="settings.html">Configurations</a></button>
+		</navbar>
+		<div class="horodateur">
+		  <p><span id="date"></span></br>
+		  <span id="heure"></span></p>
+		</div>
+	</header>
+	<main>
+		<sidebar>
+			<button onclick="">Nouveau patient</button>
+			<button onclick="">Fiche patient</button>
+			<button onclick="">Nouveau RDV</button>
+		</sidebar>
+		<div class="contenu">
+			<form id="patientForm">
+				<fieldset>
+					<legend>Fiche Patient</legend>
+					<label for="id2">ID :</label>
+					<input type="text" id="id2" name="id2" required><br><br>
+					<label for="prenom">Prénom :</label>
+				    <input type="text" id="prenom" name="prenom" required><br><br>
+				
+				    <label for="nom">Nom :</label>
+				    <input type="text" id="nom" name="nom" required><br><br>
+				
+				    <label for="genre">Genre :</label>
+				    <select id="genre" name="genre" required>
+				      <option value="">--Choisir--</option>
+				      <option value="Homme">Homme</option>
+				      <option value="Femme">Femme</option>
+				    </select><br><br>
+				
+				    <label for="naissance">Naissance :</label>
+				    <input type="date" id="naissance" name="naissance"><br><br>
+				
+				    <label for="telephone">Téléphone :</label>
+				    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{8}" placeholder="8 chiffres"><br><br>
+				
+				    <label for="adresse">Adresse :</label>
+				    <input type="text" id="adresse" name="adresse"><br><br>
+				
+				    <label for="rdv">Prochain RDV :</label>
+				    <input type="date" id="rdv" name="rdv"><br><br>
+				
+				    <label for="observations">Observations :</label><br>
+				    <textarea id="observations" name="observations" rows="3" cols="30"></textarea><br><br>
+				
+				    <label for="balance">Balance :</label>
+				    <input type="number" id="balance" name="balance" step="0.01"><br><br>
+				
+				    <label for="endette">Endetté :</label>
+				    <select id="endette" name="endette">
+				      <option value="Non">Non</option>
+				      <option value="Oui">Oui</option>
+				    </select><br><br>
+				
+				    <button type="submit">Enregistrer</button>
+				    <button type="reset">Réinitialiser</button>
+				  </fieldset>
+				</form>
+
+			<div class="search-bar">
+				<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
 			</div>
-		</header>
-		<main>
-			<sidebar>
-				<button onclick="">Nouveau patient</button>
-				<button onclick="">Nouveau RDV</button>
-			</sidebar>
-			<div class="contenu">
-				<div class="search-bar">
-					<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
-				</div>
-				<table>
-				      <thead>
-					      <tr>
-						      <th>id</th>
-						      <th>ID</th>
-						      <th>Prénom</th>
-						      <th>Nom</th>
-						      <th>Genre</th>
-						      <th>Naissance</th>
-						      <th>Téléphone</th>
-						      <th>Adresse</th>
-						      <th>Observations</th>
-						      <th>Balance</th>
-						      <th>Endetté</th>
-					      </tr>
-					      
-				      </thead>
-				      <tbodyid="table-patients"></tbody>
-				</table>
-			</div>
-		</main>
-		<script>
-			function updateHorodateur() {
-			  const maintenant = new Date();
+			<table>
+			      <thead>
+				      <tr>
+					      <th>id</th>
+					      <th>ID</th>
+					      <th>Prénom</th>
+					      <th>Nom</th>
+					      <th>Genre</th>
+					      <th>Naissance</th>
+					      <th>Téléphone</th>
+					      <th>Adresse</th>
+					      <th>Prochain RDV</th>
+					      <th>Observations</th>
+					      <th>Balance</th>
+					      <th>Endetté</th>
+				      </tr>
+				      
+			      </thead>
+			      <tbodyid="table-patients"></tbody>
+			</table>
+		</div>
+	</main>
+	<script>
+		function updateHorodateur() {
+		  const maintenant = new Date();
 
-			  const optionsDate = { day: '2-digit', month: '2-digit', year: 'numeric' };
-			  const dateStr = maintenant.toLocaleDateString('fr-FR', optionsDate);
+		  const optionsDate = { day: '2-digit', month: '2-digit', year: 'numeric' };
+		  const dateStr = maintenant.toLocaleDateString('fr-FR', optionsDate);
 
-			  const heures = maintenant.getHours().toString().padStart(2, '0');
-			  const minutes = maintenant.getMinutes().toString().padStart(2, '0');
-			  const heureStr = `${heures}:${minutes}`;
+		  const heures = maintenant.getHours().toString().padStart(2, '0');
+		  const minutes = maintenant.getMinutes().toString().padStart(2, '0');
+		  const heureStr = `${heures}:${minutes}`;
 
-			  document.getElementById('date').textContent = dateStr;
-			  document.getElementById('heure').textContent = heureStr;
-			}
-			// Mise à jour immédiate + chaque minute
-			updateHorodateur();
-			setInterval(updateHorodateur, 60 * 1000);
-		</script>
-		  <script src="patients.js"></script>
-	</body>
+		  document.getElementById('date').textContent = dateStr;
+		  document.getElementById('heure').textContent = heureStr;
+		}
+		// Mise à jour immédiate + chaque minute
+		updateHorodateur();
+		setInterval(updateHorodateur, 60 * 1000);
+	</script>
+	  <script src="patients.js"></script>
+</body>
 </html>
