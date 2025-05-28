@@ -84,17 +84,9 @@ sidebar button {
 #attente{background-color:green;}
 #chngrdv{background-color:yellow; color:black;}
 #supprimer{background-color:red;}
-.nav-buttons .btn:hover,
-.nav-buttons button:hover {
+button:hover {
   background-color: #3058a1;
 }
-h3 {
-  /*font-size: 1.5rem;*/
-  font-weight: 600;
-  margin: 1rem 0;
-}
-
-/* Conteneurs colorés */
 .listerdv,
 .listeAtt,
 .listeCons {
