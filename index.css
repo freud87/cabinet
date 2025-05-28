@@ -48,7 +48,7 @@ navbar button.this {
   font-weight: bold; /* Texte en gras */
   align-self: flex-end;
   height: 100%;
-  box-shadow: 0 5px 0 #3b837e; /* ombre vers le bas */
+  box-shadow: 0 20px 0 #3b837e; /* ombre vers le bas */
 }
 /* Horodateur */
 .horodateur {
