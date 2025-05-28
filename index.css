@@ -71,11 +71,7 @@ sidebar {
   gap: 10px;
 }
 sidebar,
-.rdvdujour,
-.choix,
-.attente,
-.soin,
-.termine {
+.rubriques {
   display: flex;
   flex-direction: column;
   /*justify-content: center;*/
