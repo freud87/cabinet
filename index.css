@@ -16,7 +16,8 @@ a:hover {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
+   align-items: stretch; /* Permet aux enfants de s’étendre */
   /*padding: 1rem 2rem;*/
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -47,7 +48,7 @@ navbar button.this {
   background-color: #58a8a2; /* Une teinte plus foncée ou plus claire */
   font-weight: bold; /* Texte en gras */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Un léger relief */
-  align-self: flex-end; /* Aligne le bouton vers le bas du header */
+  align-self: flex-end;
 }
 /* Horodateur */
 .horodateur {
