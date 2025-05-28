@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Liste des patients</title>
-  <link rel="stylesheet" href="patients.css">
+	<meta charset="UTF-8" />
+	<title>Accueil</title>
+	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-
-    <h1>🦷 Liste des patients</h1>
-
-    <div class="actions">
-		<button><a href="index.html">🏠 Accueil</a></button>
-		<button><a href="NVPatient.html">➕ Nouveau patient</a></button>
-		<button onclick="allerRDV()">📅 Aller aux RDV</button>
-    </div>
-	
-	<div class="search-bar">
-		<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
-	</div>
-
-    <table id="table-patients">
-      <thead></thead>
-      <tbody></tbody>
-    </table>
-
-  <script src="patients.js"></script>
-</body>
+	<body>
+		<header>
+			<img src="logomini.png" alt="Logo cabinet" class="logo">
+			<navbar>
+				<h2>Mon Cabinet</h2>
+				<button><a href="index.html"></a>Tableau de bord</button>
+				<button class="this">Liste des patients</button>
+				<button><a href="RDV.html">Rendez-vous</a></button>
+				<button><a href="statistics.html">Statistiques</a></button>
+				<button><a href="settings.html">Configurations</a></button>
+			</navbar>
+			<div class="horodateur">
+			  <p><span id="date"></span></br>
+			  <span id="heure"></span></p>
+			</div>
+		</header>
+		<main>
+			<sidebar>
+				<button onclick="">Nouveau patient</button>
+				<button onclick="">Nouveau RDV</button>
+			</sidebar>
+			<div class="contenu">
+				<div class="search-bar">
+					<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
+				</div>
+				<table>
+				      <thead></thead>
+				      <tbodyid="table-patients"></tbody>
+				</table>
+			</div>
+		</main>
+		  <script src="patients.js"></script>
+	</body>
 </html>
