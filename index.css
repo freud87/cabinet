@@ -24,6 +24,7 @@ navbar {
   flex: 1;
   display: flex;
   justify-content: space-between;
+  align-content: flex-end;
 }
 header h2 {
   flex: 1;
