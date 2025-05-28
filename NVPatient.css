@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 
-.header {
+header {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -18,7 +18,7 @@ body {
   object-fit: contain;
 }
 
-h1 {
+h2 {
   margin: 0 auto;
   color: #343a40;
 }
