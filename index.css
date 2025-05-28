@@ -31,7 +31,8 @@ header h1 {
 }
 
 /* Boutons de navigation */
-.nav-buttons, .choix {
+sidebar,
+.choix {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,9 +44,7 @@ header h1 {
   flex-direction: column; /* disposition en colonne */
   gap: 10px;
 }
-
-.nav-buttons .btn,
-.nav-buttons button, .choix .btn {
+.sidebar button, .choix .btn {
   padding: 0.75rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
