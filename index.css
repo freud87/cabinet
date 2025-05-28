@@ -59,6 +59,10 @@ main {
 }
 sidebar {
   widht: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-left: 5px;
 }
 .contenu {
   flex: 1;
@@ -70,21 +74,14 @@ sidebar {
   flex: 1; /* Tous les éléments prennent la même largeur */
   gap: 10px;
 }
-sidebar,
 .rubriques {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
   gap: 0.7rem;
   margin-left: 5px;
-  /*padding: 1rem;*/
-}
-.rubriques {
-  flex-direction: column; /* disposition en colonne */
-  gap: 5px;
   border-radius: 8px;
-  background-color: #75c7c1;
+  background-color: #b6e5e2;
 }
 .titre {
   margin: 1.2rem 0.7rem 0;
