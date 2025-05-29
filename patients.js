@@ -1,3 +1,21 @@
+const client = new Appwrite.Client();
+client
+   .setEndpoint("https://fra.cloud.appwrite.io/v1") // Ton endpoint Appwrite
+  .setProject("6834cfa3001cf140ff0e");              // Ton Project ID
+
+const database = new Appwrite.Databases(client);
+const databaseId = "683847b900299aa1a74e";
+const collectionId = "683847d30033f996051f";
+
+// dans ton form.addEventListener("submit", ...)
+database.createDocument(
+  databaseId,
+  collectionId,
+  Appwrite.ID.unique(),
+  { /* données patient */ }
+);
+
+
 const formPatient = document.getElementById("form-patient");
 const inputRdv = document.getElementById("rdv");
 const champIdPatient = document.getElementById("idpatient");
