@@ -27,6 +27,53 @@
 			<button onclick="">Nouveau patient</button>
 			<button onclick="">Fiche patient</button>
 			<button onclick="">Nouveau RDV</button>
+			<form>
+				<table>
+					<tbody>
+						<tr>
+							<td><label for="nom">Prénom :</label></td>
+							<td><input type="text" id="prenom" name="prenom" required></td>
+						</tr>
+						<tr>
+							<td><label for="prenom">Nom :</label></td>
+							<td><input type="text" id="nom" name="nom" required></td>
+						</tr>
+						<tr>
+							<td><label for="sexe">Sexe :</label></td>
+						        <td>
+								<select id="sexe" name="sexe" required>
+									<option value="">Sélectionner</option>
+									<option value="Homme">Homme</option>
+									<option value="Femme">Femme</option>
+								</select>
+					        	</td>
+				      		</tr>
+						<tr>
+							<td><label for="naissance">Date de naissance :</label></td>
+							<td><input type="date" id="naissance" name="naissance" required></td>
+						</tr>
+						<tr>
+							<td><label for="telephone">Téléphone :</label></td>
+							<td><input type="tel" id="telephone" name="telephone" required></td>
+						</tr>				      
+						<tr>
+							<td><label for="adresse">Adresse :</label></td>
+							<td><input type="text" id="adresse" name="adresse" required></td>
+						</tr>
+						<tr>
+							<td><label for="rdv">Prochain RDV :</label></td>
+							<td><input type="date" id="rdv" name="rdv" required></td>
+						</tr>
+						<tr>
+							<td><label for="observations">Observations :</label></td>
+							<td><textarea id="observations" name="observations" rows="3"></textarea></td>
+						</tr>
+						<tr>
+							<td><button type="submit">Ajouter le patient</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
 		</sidebar>
 		<div class="contenu">
 			<form id="patientForm">
