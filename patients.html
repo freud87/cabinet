@@ -28,63 +28,58 @@
 			<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
 			<button onclick="">Nouveau RDV</button>
 			<button onclick="">Nouvelle Recette</button>
-			<div style="display: flex; justify-content: space-between;">
-				<button onclick="afficherFormPatient()">Nouveau patient</button>
-				<button onclick="">Modifier patient</button>
-			</div>
-			<form id="form-patient" style="display: none;">
-				<table>
-					<tbody>
-						<tr>
-							<td><label for="nom">Prénom :</label></td>
-							<td><input type="text" id="prenom" name="prenom" required></td>
-						</tr>
-						<tr>
-							<td><label for="prenom">Nom :</label></td>
-							<td><input type="text" id="nom" name="nom" required></td>
-						</tr>
-						<tr>
-							<td><label for="sexe">Sexe :</label></td>
-						        <td>
-								<select id="sexe" name="sexe" required>
-									<option value="">Sélectionner</option>
-									<option value="Homme">Homme</option>
-									<option value="Femme">Femme</option>
-								</select>
-					        	</td>
-				      		</tr>
-						<tr>
-							<td><label for="naissance">Date de naissance :</label></td>
-							<td><input type="date" id="naissance" name="naissance" required></td>
-						</tr>
-						<tr>
-							<td><label for="telephone">Téléphone :</label></td>
-							<td><input type="tel" id="telephone" name="telephone" required></td>
-						</tr>				      
-						<tr>
-							<td><label for="adresse">Adresse :</label></td>
-							<td><input type="text" id="adresse" name="adresse" required></td>
-						</tr>
-						<tr>
-							<td><label for="rdv">Prochain RDV :</label></td>
-							<td><input type="date" id="rdv" name="rdv" required></td>
-						</tr>
-						<tr>
-							<td><label for="observations">Observations :</label></td>
-							<td><textarea id="observations" name="observations" rows="3"></textarea></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<div style="display: flex; justify-content: space-around;">
-									<button type="submit">Ajouter</button>
-									<button type="button" onclick="annulerAjoutPatient()">Annuler</button>
-								</div>
-							</td>
-						</tr>
-
-					</tbody>
-				</table>
-			</form>
+			<button onclick="afficherFormPatient()">Nouveau patient</button>
+			<button onclick="">Modifier patient</button>
+			<form id="form-patient">
+				  <div>
+				    <label for="prenom">Prénom :</label>
+				    <input type="text" id="prenom" name="prenom" required>
+				  </div>
+				
+				  <div>
+				    <label for="nom">Nom :</label>
+				    <input type="text" id="nom" name="nom" required>
+				  </div>
+				
+				  <div>
+				    <label for="sexe">Genre :</label>
+				    <select id="sexe" name="sexe" required>
+				      <option value="">Sélectionner</option>
+				      <option value="Homme">Homme</option>
+				      <option value="Femme">Femme</option>
+				    </select>
+				  </div>
+				
+				  <div>
+				    <label for="naissance">Date de naissance :</label>
+				    <input type="date" id="naissance" name="naissance" required>
+				  </div>
+				
+				  <div>
+				    <label for="telephone">Téléphone :</label>
+				    <input type="tel" id="telephone" name="telephone" required>
+				  </div>
+				
+				  <div>
+				    <label for="adresse">Adresse :</label>
+				    <input type="text" id="adresse" name="adresse" required>
+				  </div>
+				
+				  <div>
+				    <label for="rdv">Prochain RDV :</label>
+				    <input type="date" id="rdv" name="rdv" required>
+				  </div>
+				
+				  <div>
+				    <label for="observations">Observations :</label>
+				    <textarea id="observations" name="observations" rows="3"></textarea>
+				  </div>
+				
+				  <div style="display: flex; justify-content: space-around; gap: 1rem; margin-top: 1rem;">
+				    <button type="submit">Ajouter</button>
+				    <button type="button" onclick="annulerAjoutPatient()">Annuler</button>
+				  </div>
+				</form>
 		</sidebar>
 		<div class="contenu">
 			<table>
