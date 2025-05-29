@@ -156,12 +156,12 @@
   }
 
   // Annuler ajout et réinitialiser
-  function annulerAjoutPatient() {
-    formPatient.reset();
-    formPatient.style.display = "none";
-    champIdPatient.textContent = "";
-    activerInterfacePatient(true);
-  }
+ 
+function annulerAjoutPatient() {
+  const form = document.getElementById("form-patient");
+  form.reset(); // Réinitialise les champs
+  form.style.display = "none"; // Cache le formulaire
+}
 
   // Génération automatique d'un ID patient
   ["prenom", "nom", "naissance"].forEach(id => {
