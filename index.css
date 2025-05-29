@@ -127,9 +127,11 @@ i {
 
 #search-input {
   border-color: #58a8a2;
+  background-color: #5DC7CA;
   outline: none;
 }
-sidebar button { 
+sidebar button {
+  background-color: #489C9F;
   border: none;
 }
 #search-input,
@@ -137,7 +139,6 @@ sidebar button {
   padding: 0.75rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
-  background-color: #489C9F;
   color: white;
  /* border: none;*/
   border-radius: 8px;
