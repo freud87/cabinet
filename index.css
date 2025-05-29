@@ -185,7 +185,6 @@ tbody tr:hover {
   background-color: #e0f5f5; /* léger hover turquoise pâle */
   transition: background-color 0.2s;
 }
-td input,
 td select,
 td textarea {
   width: 100%;
@@ -196,9 +195,32 @@ td textarea {
   background-color: #f9f9f9;
   box-sizing: border-box;
 }
-form table th,
-form table td {
-  padding: 0.3rem;
-  text-align: left;
-  vertical-align: middle;
+#form-patient {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#form-patient label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+#form-patient input,
+#form-patient select,
+#form-patient textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#form-patient button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
