@@ -160,3 +160,28 @@ button:hover {
   min-height: 300px;
   color: white;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 0.95rem;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+th {
+  background-color: #489C9F; /* turquoise comme ton input */
+  color: white;
+  font-weight: 600;
+}
+tbody tr:nth-child(even) {
+  background-color: #f0f0f0; /* alternance douce */
+}
+tbody tr:hover {
+  background-color: #e0f5f5; /* léger hover turquoise pâle */
+  transition: background-color 0.2s;
+}
+
