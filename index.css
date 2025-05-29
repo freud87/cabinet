@@ -137,7 +137,7 @@ sidebar button {
 }
 #search-input,
 sidebar button {
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 0.8rem;
   font-size: 1rem;
   font-weight: 600;
   color: white;
@@ -170,7 +170,7 @@ table {
 }
 th, td {
   border: 1px solid #ccc;
-  padding: 0.6rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   text-align: left;
 }
 th {
@@ -189,7 +189,7 @@ td input,
 td select,
 td textarea {
   width: 100%;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.6rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -198,7 +198,7 @@ td textarea {
 }
 form table th,
 form table td {
-  padding: 0.1rem;
+  padding: 0.3rem;
   text-align: left;
   vertical-align: middle;
 }
