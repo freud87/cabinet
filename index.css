@@ -124,13 +124,13 @@ i {
   gap: 10px;
   background-color: #75c7c1;
 }
-#search-input::placeholder {
+/*#search-input::placeholder {
   color: rgba(255, 255, 255, 0.4); /* très transparent */
   font-weight: 400;
-}
+}*/
 #search-input:focus {
   background-color: #5DC7CA; /* turquoise clair */
-  border-color: #ffffff;     /* bordure blanche au focus */
+  border-color: #58a8a2;
   outline: none;
   color: white;
 }
