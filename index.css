@@ -124,6 +124,16 @@ i {
   gap: 10px;
   background-color: #75c7c1;
 }
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+}
+
+#search-input:focus {
+  outline: 2px solid white;
+  background-color: #317A7D;
+}
+#search-input,
 sidebar button {
   padding: 0.75rem 1.2rem;
   font-size: 1rem;
