@@ -128,12 +128,13 @@ i {
   color: rgba(255, 255, 255, 0.4); /* très transparent */
   font-weight: 400;
 }
-
 #search-input:focus {
-  outline: 2px solid white;
-  background-color: #5DC7CA;
-  border-color: #489C9F;
+  background-color: #5DC7CA; /* turquoise clair */
+  border-color: #ffffff;     /* bordure blanche au focus */
+  outline: none;
+  color: white;
 }
+
 #search-input,
 sidebar button {
   padding: 0.75rem 1.2rem;
