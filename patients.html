@@ -29,10 +29,10 @@
 			<button onclick="">Nouveau RDV</button>
 			<button onclick="">Nouvelle Recette</button>
 			<div style="display: flex; justify-content: space-between;">
-				<button onclick="">Nouveau patient</button>
+				<button onclick="afficherFormPatient()">Nouveau patient</button>
 				<button onclick="">Modifier patient</button>
 			</div>
-			<form>
+			<form id="form-patient" style="display: none;">
 				<table>
 					<tbody>
 						<tr>
@@ -77,7 +77,7 @@
 							<td colspan="2">
 								<div style="display: flex; justify-content: space-around;">
 									<button type="submit">Ajouter</button>
-									<button type="button">Annuler</button>
+									<button onclick="annulerAjoutPatient()">Annuler</button>
 								</div>
 							</td>
 						</tr>
