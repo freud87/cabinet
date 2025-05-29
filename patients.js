@@ -66,25 +66,28 @@ function annulerAjoutPatient() {
 formPatient.addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = {
-    id_patient: champIdPatient.textContent,
+    idpatient: champIdPatient.textContent,
     prenom: document.getElementById("prenom").value,
     nom: document.getElementById("nom").value,
     sexe: document.getElementById("sexe").value,
     naissance: document.getElementById("naissance").value,
     telephone: document.getElementById("telephone").value,
     adresse: document.getElementById("adresse").value,
-    prochain_rdv: document.getElementById("rdv").value,
+    prochainrdv: document.getElementById("rdv").value,
     observations: document.getElementById("observations").value
   };
 
   try {
-    // Remplace ceci par ton client Appwrite configuré :
-    await appwrite.database.createDocument('base_id', 'patients', 'unique()', data);
+    await database.createDocument(
+      databaseId,
+      collectionId,
+      Appwrite.ID.unique(),
+      data
+    );
     alert("Patient ajouté avec succès !");
     annulerAjoutPatient();
-    // Recharge liste des patients ici si besoin
   } catch (err) {
-    console.error(err);
+    console.error("Erreur Appwrite :", err);
     alert("Erreur lors de l'ajout du patient.");
   }
 });
