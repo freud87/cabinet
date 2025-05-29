@@ -124,7 +124,10 @@ i {
   gap: 10px;
   background-color: #75c7c1;
 }
-
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+  /*font-weight: 400;*/
+}
 #search-input:focus {
   background-color: rgba(255, 255, 255, 0.4); /* très transparent */
   border-color: #58a8a2;
