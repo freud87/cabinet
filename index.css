@@ -125,13 +125,14 @@ i {
   background-color: #75c7c1;
 }
 #search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.4); /* très transparent */
   font-weight: 400;
 }
 
 #search-input:focus {
   outline: 2px solid white;
-  background-color: #317A7D;
+  background-color: #5DC7CA;
+  border-color: #489C9F;
 }
 #search-input,
 sidebar button {
