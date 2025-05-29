@@ -184,4 +184,14 @@ tbody tr:hover {
   background-color: #e0f5f5; /* léger hover turquoise pâle */
   transition: background-color 0.2s;
 }
-
+td input,
+td select,
+td textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
