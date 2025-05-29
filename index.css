@@ -195,3 +195,9 @@ td textarea {
   background-color: #f9f9f9;
   box-sizing: border-box;
 }
+form table th,
+form table td {
+  padding: 0.3rem;
+  text-align: left;
+  vertical-align: middle;
+}
