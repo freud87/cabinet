@@ -24,8 +24,8 @@
 	</header>
 	<main>
 		<sidebar>
+			<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
 			<button onclick="">Nouveau patient</button>
-			<button onclick="">Fiche patient</button>
 			<button onclick="">Nouveau RDV</button>
 			<form>
 				<table>
@@ -69,16 +69,14 @@
 							<td><textarea id="observations" name="observations" rows="3"></textarea></td>
 						</tr>
 						<tr>
-							<td><button type="submit">Ajouter le patient</button></td>
+							<td><button type="submit">Ajouter</button></td>
+							<td><button type="cancel">Annuler</button></td>
 						</tr>
 					</tbody>
 				</table>
 			</form>
 		</sidebar>
 		<div class="contenu">
-			<div class="search-bar">
-				<input type="text" id="search-input" placeholder="Rechercher par nom, prénom ou téléphone" onkeyup="filtrerPatients()">
-			</div>
 			<table>
 			      <thead>
 				      <tr>
@@ -95,9 +93,8 @@
 					      <th>Balance</th>
 					      <th>Endetté</th>
 				      </tr>
-				      
 			      </thead>
-			      <tbodyid="table-patients"></tbody>
+			      <tbody id="table-patients"></tbody>
 			</table>
 		</div>
 	</main>
